@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor-primaria: #0d1b2a; /* Um azul bem escuro, quase preto */
+  --cor-secundaria: #1b263b; /* Um azul um pouco mais claro para fundos */
+  --cor-detalhe: #415a77; /* Um azul acinzentado para bordas e destaques */
+  --cor-texto: #e0e1dd; /* Um branco-quente, confortável para ler */
+  --cor-highlight: #778da9; /* A cor para links e interações */
+
+  --fonte-principal: "Arial", sans-serif; /* Uma fonte segura e limpa */
+}
+
+body {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  font-family: var(--fonte-principal);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 10%;
+  border-bottom: solid var(--cor-detalhe);
+  position: sticky;
+  top: 0;
+  background-color: var(--cor-primaria);
+}
+
+.hero nav a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+
+  transition: color 0.3s ease;
+}
+.hero nav a:hover {
+  color: var(--cor-highlight);
+}
