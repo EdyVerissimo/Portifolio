@@ -4,17 +4,23 @@
   padding: 0;
 }
 :root {
-  --cor-primaria: #0d1b2a; /* Um azul bem escuro, quase preto */
-  --cor-secundaria: #1b263b; /* Um azul um pouco mais claro para fundos */
-  --cor-detalhe: #415a77; /* Um azul acinzentado para bordas e destaques */
-  --cor-texto: #e0e1dd; /* Um branco-quente, confortável para ler */
-  --cor-highlight: #778da9; /* A cor para links e interações */
+  --cor-primaria: #0d1b2a;
+  --cor-secundaria: #1b263b;
+  --cor-detalhe: #415a77;
+  --cor-texto: #e0e1dd;
+  --cor-highlight: #778da9;
 
-  --fonte-principal: "Arial", sans-serif; /* Uma fonte segura e limpa */
+  --fonte-principal: "Arial", sans-serif;
 }
 
 body {
-  background-color: var(--cor-primaria);
+  background-image: radial-gradient(
+    circle,
+    var(--cor-secundaria),
+    var(--cor-primaria)
+  );
+
+  min-height: 100vh;
   color: var(--cor-texto);
   font-family: var(--fonte-principal);
 }
@@ -28,7 +34,7 @@ body {
   border-bottom: 1px solid var(--cor-detalhe);
   position: sticky;
   top: 0;
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-secundaria);
 }
 
 .hero nav a {
@@ -53,10 +59,12 @@ body {
   gap: 20px;
   text-align: center;
 }
-
+#sobre-min p {
+  text-underline-position: above;
+}
 .foto {
-  width: 150px;
-  height: 150px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   border: 1px solid var(--cor-highlight);
 }
@@ -89,13 +97,32 @@ body {
   color: var(--cor-highlight);
   margin-bottom: 10px;
 }
-#contato {
-  border-top: 1px solid var(--cor-detalhe);
-  margin-top: 60px;
-  padding: 40px 10%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.chamada-contato {
+  text-align: center;
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid var(--cor-detalhe);
+}
+
+.chamada-contato h3 {
+  color: var(--cor-highlight);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.links-contato {
+  margin-top: 20px;
+}
+
+.links-contato a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 1.3s ease;
+}
+
+.links-contato a:hover {
+  color: var(--cor-highlight);
 }
